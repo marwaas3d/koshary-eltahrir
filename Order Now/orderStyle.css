@@ -1,0 +1,118 @@
+body{
+    background-image: url('./assetsOrder/background.jpg');
+      background-repeat:no-repeat;
+      background-size: cover;
+      background-position: center;
+  
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top:50px;  
+  }
+
+  ::selection{
+    background-color: green;
+    color: white;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background-color: #0c7239;
+  }
+
+  ::-webkit-scrollbar{
+    width: 12px;
+  }
+  
+  .container{
+    border-radius: 10px;
+    background-color: #0c72386b ;
+    min-height: 100vh; 
+    position: relative;
+  }
+
+  .payHere{
+    position: absolute;
+    background-color:#ffc107;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 140px;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .payHere:hover{
+    background-color: #0c7239;
+    color: white;
+  }
+
+  .payHere span{
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  section{
+    margin:20px;
+  }
+  
+  .row{
+  margin:20px 10px;
+  }
+  
+  .card{
+    margin-bottom:20px;
+    height:420px;
+    width:280px;
+    border:none;
+    position:relative;
+    border:4px solid #ffc107;
+    border-radius:20px;
+    overflow:hidden;
+  
+  }
+
+  
+.counter i{
+  font-size: 25px;
+  cursor: pointer;
+}
+.counter .count{
+  font-size: 20px;
+}
+
+  
+  img{
+    height:250px;
+    cursor:pointer;
+    width:99%;
+    border-top-right-radius:20px;
+    border-top-left-radius:20px;
+    margin-bottom:10px;
+    transition: transform 0.3s linear;
+    &:hover{
+      transform:scale(1.1);
+    }
+  }
+  
+  
+  
+  .heart{
+    position:absolute;
+    bottom:20px;
+    right:27px;
+  }
+  
+  i{
+    transform:scale(1);
+    color:white;
+  }
+  
+  p,h4{
+    color:green;
+    font-weight:500;
+  }
+  

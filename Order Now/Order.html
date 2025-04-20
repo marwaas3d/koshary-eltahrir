@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Order Now</title>
+        <link rel="icon" href="./assetsOrder/Logo.png" type="image/png">
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+        </style>
+        <!-- Icon Font Stylesheet -->
+        <script src="https://kit.fontawesome.com/8578471d28.js" crossorigin="anonymous"></script>
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="./orderStyle.css">
+    </head>
+<body>
+
+    <section class="container">
+
+        <div class="row">
+          <h1 class="text-white">Order Now<i class="fa-solid fa-mobile-screen ps-3"></i></h1>
+        </div>
+
+        <div class="payHere"><i class="fa-solid fa-money-check-dollar fa-2x mt-2"></i> <br><span>Pay Here</span></div>
+    </section>
+
+
+
+
+
+    <script>
+window.onload = function () {
+  if (window.location.pathname.includes("Order.html")) {
+    const row = document.querySelector(".row");
+
+    const storedList = localStorage.getItem("orderList");
+
+    if (storedList) {
+      try {
+        const orderList = JSON.parse(storedList);
+
+        orderList.forEach((order) => {
+          const col = document.createElement("div");
+          col.className = "col-s-1 col-md-4 col-lg-3 d-flex justify-content-center align-items-center";
+
+          col.innerHTML = `
+            <div class="card d-flex justify-content-center align-items-center mt-3">
+              <img src="${order.img}" class="card-img-top img-cover" alt="${order.name}">
+              <div class="card-body p-1">
+                <p class="card-text mb-1">${order.name}</p>
+                <h4 class="card-text">${order.price} LE</h4>
+              </div>
+              <button class="btn btn-warning mb-3 mt-2">remove item</button>
+              <div class="d-flex justify-content-evenly align-items-center w-75 counter mb-3">
+                <i class="fa-solid fa-square-plus text-warning" id="add"></i>
+                <span class="text-success count" id="count">1</span>
+                <i class="fa-solid fa-square-minus text-warning" id="minus"></i>
+              </div>
+            </div>
+          `;
+
+          const removeButton = col.querySelector("button");
+          removeButton.addEventListener("click", function () {
+            col.remove();
+
+            const currentList = JSON.parse(localStorage.getItem("orderList")) || [];
+            const updatedOrderList = currentList.filter(item => item.name !== order.name);
+
+            localStorage.setItem("orderList", JSON.stringify(updatedOrderList));
+          });
+
+          const addButton = col.querySelector("#add");
+          const minusButton = col.querySelector("#minus");
+          const countSpan = col.querySelector("#count");
+
+          addButton.addEventListener("click", function () {
+            let count = parseInt(countSpan.textContent);
+            count++;
+            countSpan.textContent = count;
+          });
+
+          minusButton.addEventListener("click", function () {
+            let count = parseInt(countSpan.textContent);
+            if (count > 1) {
+              count--;
+              countSpan.textContent = count;
+            }
+
+            if (count === 0) {
+              col.remove();
+              const currentList = JSON.parse(localStorage.getItem("orderList")) || [];
+              const updatedOrderList = currentList.filter(item => item.name !== order.name);
+              localStorage.setItem("orderList", JSON.stringify(updatedOrderList));
+            }
+          });
+
+          row.appendChild(col);
+        });
+      } catch (error) {
+        console.error("Error parsing orderList:", error);
+      }
+    } else {
+      console.log("No orderList found in localStorage.");
+    }
+  }
+};
+
+
+
+
+
+    </script>
+    
+    
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

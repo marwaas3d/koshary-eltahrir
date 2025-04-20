@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koshary Eltahrir</title>
+    <link rel="icon" href="./assets/Logo.png" type="image/png">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+    </style>
+    <!-- Icon Font Stylesheet -->
+    <script src="https://kit.fontawesome.com/8578471d28.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet     -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="addedOrder" id="addedOrder">The Item is added successfully</div>
+
+
+
+    <div class="w-100 position-relative p-0">
+        <nav class="navbar navbar-dark navbar-expand-lg  px-4 px-lg-5 py-3 py-lg-2">
+            <a href="" class="navbar-brand p-0">
+                <h1 class="m-0">
+                    <img src="./assets/Logo.png" alt="" class="logo">
+                </h1>
+            </a>
+
+            <button class="navbar-toggler" type="submit">
+                <span class="fa fa-bars"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0 pe-4">
+                    <a href="#home" class="nav-item nav-link active">Home</a>
+                    <a href="#services" class="nav-item nav-link">Services</a>
+                    <a href="#about" class="nav-item nav-link">About as</a>
+                    <a href="#menuSection" class="nav-item nav-link">Menu</a>
+                    <a href="#contact" class="nav-item nav-link">Contact</a>
+                </div>
+
+                <a href="./Order Now/Order.html" class="btn btn-warning py-2 px-4">Your Order</a>
+            </div>           
+        </nav>
+
+
+        <div class="w-100 py-5 hero-header mb-5 " id="home">
+            <div class="container my-5 py-5">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 text-center text-lg-center">
+                        <h1 class="display-3 text-white animated sliderInLeft eltahrir">كشري التحرير</h1>
+                        <p class="text-white animated sliderInLeft mb-4 pb-2 eltahrir">هتاكل صوابعك وراه</p>
+                        <a href="./Order Now/Order.html" class="btn btn-warning py-sm-2 px-sm-5 sliderInLeft">Your Order</a>
+                    </div>
+
+
+                    <div class="col-lg-6 text-center text-lg-center overflow-hidden">
+                        <img src="./assets/Main Plate.png" width="490px" class="img-fluid" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-------------------------------services------------------------------->
+    <div class="container-xxl" id="services">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-lg-4 wow col-sm-6 fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item  rounded pt-3" id="branches">
+                        <div class="p-4">
+                            <i class="fa-solid fa-bowl-food fa fa-3x text-warning mb-4"></i>  
+                                <h5>Branches</h5>
+                                <p>Click here to find out the branches of Koshary El Tahrir.</p>
+                        </div>
+                    </div>
+                </div>
+
+<!---------------popup---------------->
+                <div id="popupBranches" class="popupBranches">
+                    <div class="popup-contentBranches d-flex justify-content-center">
+                        <span class="close-btn" id="closeBtnBranches">&times;</span>
+                        <img src="./assets/العناوين.webp" class="w-100 h-100" alt="">
+                    </div>
+                </div>
+<!----------------popup------------------> 
+
+                <div class="col-lg-4 wow col-sm-6 fadeInUp" >
+                    <a href="./Order Now/Order.html">
+                        <div class="service-item rounded pt-3" id="OnlineOrder">
+                            <div class="p-4">
+                                <i class="fa-solid fa-motorcycle fa fa-3x text-warning mb-4"></i>
+                                    <h5>Online Order</h5>
+                                    <p>Click here to order Your favorite koshary online.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 wow col-sm-6 fadeInUp" >
+                    <div class="service-item rounded pt-3" id="serviceItem">
+                        <div class="p-4">
+                            <i class="fa-solid fa-headset fa fa-3x text-warning mb-4"></i>
+                             <h5>Customer Service</h5>
+                                <p>Contact customer service to report a problem or get help with something.</p>
+                        </div>
+                    </div>
+                </div>
+
+<!---------------popup---------------->
+                <div id="popup" class="popup">
+                    <div class="popup-content">
+                        <span class="close-btn" id="closeBtn">&times;</span>
+                        <i class="fa-solid fa-phone text-white fa-2x"></i>
+                        <h2 class="text-white">Please call  us on</h2>
+                        <h4 class="text-white mb-0">16011</h4>
+                        <br>
+                        <h3 class="text-warning mb-4">OR</h3>
+                        <button id="leaveMsg" class="btn btn-warning">Leave a message</button>
+                    </div>
+                </div>
+<!----------------popup------------------>                
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <!----------------------------------about us---------------------------->
+    <div class="container-xxl py-5" id="about">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="row g-3">
+
+                        <div class="col-6 text-start">
+                            <img src="./assets/about-1.jpeg" alt="" class="img-fluid rounded w-100 wow zoomIn">
+                        </div>
+
+                        <div class="col-6 text-start">
+                            <img src="./assets/about-2.jpeg" alt="" class="img-fluid rounded w-75 wow zoomIn" style="margin-top: 20%;">
+                        </div>
+
+                        <div class="col-6 text-end">
+                          <img src="./assets/about-3.png" alt="" class="img-fluid rounded w-75 wow zoomIn" >
+                        </div>
+
+                        <div class="col-6 text-start">
+                            <img src="./assets/about-4.png" alt="" class="img-fluid rounded w-100 wow zoomIn">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h5 class="section-title ff-secondary text-start text-warning fw-normal">About Us</h5>
+                    <h1 class="mb-4 text-warning" style="font-weight: bold;">Welcome To <img src="./assets/Logo.png" alt="" style="width: 70px; height: 70px;"></h1>
+                    <p class="mb-3" style="color: green; font-size: 17px;">From the heart of Egypt, amidst the bustling streets and timeless stories, Koshary El Tahrir began its journey in 1963 with one simple goal: to serve a truly authentic Egyptian dish with unmatched quality and unforgettable flavor. Over the years, we’ve stayed true to our original recipe and the love that made our name a household favorite.
+
+                        At Koshary El Tahrir, we serve koshary just the way you like it—hot, hearty, and fresh, with our signature sauces that keep you coming back for more. Every detail matters to us, from carefully selected ingredients to the way we present your meal, ensuring a dining experience that brings tradition and taste together.
+                        
+                        Welcome to Koshary El Tahrir—the flavor you grew up with, and the one we proudly continue to share.</p>
+                 
+                        <div class="row mb-4 g-4">
+
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center border-start border-5 border-warning px-3">
+                                    <h1 class="flex-shrink-0 display-5 mb-0" style="color: green; font-weight: bold;">62</h1>
+                                
+                                    <div class="ps-4 text-success">
+                                        <p class="mb-0">Years Of</p>
+                                        <h6 class="text-uppercase mb-0">Experience</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center border-start border-5 border-warning px-3">
+                                    <h1 class="flex-shrink-0 display-5 mb-0" style="color: green; font-weight: bold;">35</h1>
+                                
+                                    <div class="ps-4 text-success">
+                                        <p class="mb-0">More Than</p>
+                                        <h6 class="text-uppercase mb-0">Branches</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!----------------------------------Menu---------------------------->
+    <div class="container-xxl py-5" id="menuSection">
+        <div class="container">
+
+            <div class="text-center wow fadeInUp">
+                <h5 class="section-title ff-secondary text-center text-warning fw-normal">The Menu</h5>
+                <h1 class="mb-5 text-success">Your Favourite Koshary <i class="fa-solid fa-heart"></i></h1>
+            </div>
+
+            <div class="tab-class text-center wow fadeInUp " data-wow-delay="0.1s">
+                <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+                    
+                    <li class="nav-item" id="mainDishesBtn">
+                        <a href="" class="d-flex align-items-center text-start mx-3 pb-3">
+                            <i class="fa-solid fa-bowl-food fa-2x text-warning"></i>
+                            <div class="ps-3 text-center text-success">
+                                <h6 class="mb-0 mt-n1">Main</h6>
+                                <h6 class="mb-0 mt-n1">Dishes</h6>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="nav-item" id="Drinks">
+                        <a href="" class="d-flex align-items-center text-start mx-3 pb-3">
+                            <i class="fa-solid fa-glass-water fa-2x text-warning"></i>
+                            <div class="ps-3 text-center text-success">
+                                <h6 class="mb-0 mt-n1">Drinks</h6>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item" id="Accompaniments">
+                        <a href="" class="d-flex align-items-center text-start mx-3 pb-3">
+                            <i class="fa-solid fa-heart-circle-plus fa-2x text-warning"></i>
+                            <div class="ps-3 text-center text-success">
+                                <h6 class="mb-0 mt-n1">Accompaniments</h6>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item" id="Desserts">
+                        <a href="" class="d-flex align-items-center text-start mx-3 pb-3">
+                            <i class="fa-solid fa-cookie fa-2x text-warning"></i>
+                            <div class="ps-3 text-center text-success">
+                                <h6 class="mb-0 mt-n1">Desserts</h6>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tap-pane fade show p-0 active">
+                        <div class="row g-4" id="menu">
+                            <!------------------------------API Back--------------------------->
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+    <!----------------------------------contact---------------------------->
+    <div class="container-xxl py-5 px-0 wow fadeInUp" id="contact">
+        <div class="row g-0">
+
+            <div class="col-md-6">
+                <div class="video text-center">
+                    <img src="./assets/poster.png" alt="Video Thumbnail" class="video-thumbnail">
+                    <button type="button" class="btn-play" data-bs-toggle="modal" data-src="./assets/video.mp4" data-bs-target="#videoModal">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-md-6 align-items-center rounded" style="background-color: #0c7239;">
+                <div class="p-5">
+                    <h5 class="section-title ff-secondary text-start fw-normal text-warning">Contact Us</h5>
+                    <h3 class="text-white mb-4">
+                        Contact us to report any issue you're facing so we can provide better service — we're always here to help you
+                    </h3>
+                    <form action="">
+                         <div class="row g-3">
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="">
+                                    <label for="name" style="color: #0c7239;">Your Name</label>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="email" placeholder="">
+                                    <label for="name" style="color: #0c7239;">Your Email</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-floting">
+                                    <textarea class="form-control text-success" placeholder="write your message" id="message" style="height: 100px;"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <button class="btn btn-warning w-100 py-3" type="submit" id="send">Send</button>
+                            </div>
+                         </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="message" id="messageSend"></div>
+    </div>    
+
+
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-0">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Koshary Eltahrir</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="" class="embed-responsive-item" id="video" allowfullscreen="true" allow="autoplay"></iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--------------------------------------FOOTER-------------------------------->
+<div class="container-fluid text-white footer pt-5 mt-5 wow fadeInUp">
+    <div class="container py-5">
+        <div class="row g-5 d-flex justify-content-between">
+
+            <div class=" col-lg-2 col-md-6 d-flex flex-column align-items-start">
+                <h4 class="section-title ff-secondary text-start text-warning fw-normal mb-4">Eltahrir</h4>
+                <a href="#services" class="btn btn-link p-0"><i class="fa-solid fa-angle-right" style="font-size: 15px; text-align: center;"></i> Services</a>
+                <a href="#about" class="btn btn-link p-0"><i class="fa-solid fa-angle-right" style="font-size: 15px; text-align: center;"></i> About Us</a>
+                <a href="#menu" class="btn btn-link p-0"><i class="fa-solid fa-angle-right" style="font-size: 15px; text-align: center;"></i> Menu</a>
+                <a href="#contact" class="btn btn-link p-0"><i class="fa-solid fa-angle-right" style="font-size: 15px; text-align: center;"></i> Contact</a>
+                <a href="./Order Now/Order.html" class="btn btn-link p-0"><i class="fa-solid fa-angle-right" style="font-size: 15px; text-align: center;"></i>Your Online</a>
+            </div> 
+
+            <div class="col-lg-3 col-md-6 ">
+                <h4 class=" section-title ff-secondary text-start text-warning fw-normal mb-4">Social Media</h4>
+                
+                <div class="d-flex pt-2">
+                    <a href="https://x.com/eltahrir_eg" class="btn btn-outline-light btn-social"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/kosharyeltahrir_eg" class="btn btn-outline-light btn-social"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/ElTahrirEG" class="btn btn-outline-light btn-social"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>  
+            
+            <div class="col-lg-3 col-md-6">
+                <h4 class="section-title ff-secondary text-start text-warning fw-normal mb-4">Opening</h4>
+                <h5 class="text-white fw-normal">Daily</h5>
+                <p> 7:00 AM to 10:00 PM</p>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 col-lg-12 text-center mb-4 ">
+                    &copy; <a href="mailto:marwaas3d@gmail.com" class="border-bottom">marwaas3d@gmail.com</a>
+                    <p style="display: inline;">Designed by Marwa Asaad</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+    <!-- WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
